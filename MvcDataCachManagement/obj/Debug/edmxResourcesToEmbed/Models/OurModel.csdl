@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OurDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="PlayerTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="playerName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="playerCountry" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="matchPlayed" Type="Int32" Nullable="false" />
+    <Property Name="totalRun" Type="Int32" />
+    <Property Name="totalWicket" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="OurDatabaseEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="PlayerTables" EntityType="Self.PlayerTable" />
+  </EntityContainer>
+</Schema>
